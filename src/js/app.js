@@ -28,6 +28,8 @@ function render(variables = {}) {
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
+
+  //THIS IS WORKS ALSO BUT MORE CODE
   //let nombre = document.getElementById("nombre").value;
   //<h1>${nombre == "" ? "lucy" : nombre}</h1>
 
@@ -42,7 +44,7 @@ function render(variables = {}) {
     variables.country == null ? "" : variables.country
   }
           </h3>        
-          <ul class="position-right">
+          <ul class="${variables.socialMediaPosition}">
             <li><a href="https://twitter.com/4geeksacademy/${
               variables.twitter
             }"><i class="fab fa-twitter"></i></a></li>
